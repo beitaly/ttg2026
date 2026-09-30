@@ -707,7 +707,7 @@ document.getElementById('proposal-form').addEventListener('submit', function(e) 
   if (!valid) return;
 
   // Collect data
-  var interests = Array.from(checks).map(function(c) { return c.value; }).join(', ');
+  var interests = Array.from(checks).map(function(c) { return c.value; }).join(';');
   var data = {
     fname: form.fname.value.trim(),
     lname: form.lname.value.trim(),
