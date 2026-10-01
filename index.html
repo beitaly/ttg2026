@@ -341,8 +341,29 @@ textarea { resize: vertical; min-height: 100px; }
   width: 18px;
   height: 18px;
   flex-shrink: 0;
-  accent-color: var(--orange);
   cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 2px solid #C9C4B8;
+  background: var(--white);
+  position: relative;
+  transition: background 0.15s, border-color 0.15s;
+}
+.checkbox-label input[type="checkbox"]:checked {
+  background: var(--orange);
+  border-color: var(--orange);
+}
+.checkbox-label input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 0px;
+  width: 5px;
+  height: 9px;
+  border: 2px solid #fff;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
 }
 
 .submit-btn {
